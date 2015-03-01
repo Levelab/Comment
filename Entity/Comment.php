@@ -3,6 +3,7 @@ namespace Levelab\Model\Comment\Entity;
 
 use Levelab\Model\Comment\Values\CommentId;
 use Levelab\Model\Core\Types\Author;
+use Levelab\Model\Core\Types\Commentable;
 
 class Comment {
     /**
@@ -18,6 +19,10 @@ class Comment {
      * @var \DateTime
      */
     private $dateTime;
+    /**
+     * @var Commentable
+     */
+    private $commentable;
 
     /**
      * @param CommentId $id
@@ -25,10 +30,11 @@ class Comment {
      * @param $comment
      * @param \DateTime $dateTime
      */
-    public function __construct(CommentId $id, Author $author, $comment, \DateTime $dateTime) {
+    public function __construct(CommentId $id, Author $author, $comment, Commentable $commentable, \DateTime $dateTime) {
         $this->id = $id;
         $this->author = $author;
         $this->comment = $comment;
+        $this->commentable = $commentable;
         $this->dateTime = $dateTime;
     }
 
