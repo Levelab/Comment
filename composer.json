@@ -1,0 +1,21 @@
+{
+    "name": "levelab/model/comment",
+    "type": "library",
+    "description": "Domain of Levelab Comments",
+    "keywords": ["levelab", "comments"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leonid Repin",
+            "email": "leonid-repin@levelab.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "levelab/model/core": "~0.1"
+    },
+    "autoload": {
+        "psr-0": { "Levelab\\Model\\Comment": "" }
+    },
+    "target-dir": "Levelab/Model/Comment"
+}
